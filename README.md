@@ -55,3 +55,23 @@ This project is an ESP32-based radar system that uses a servo motor to rotate an
    ```bash
    git clone https://github.com/yourusername/esp32-radar-system.git
    cd esp32-radar-system
+
+
+Open the sketch.ino file in the Arduino IDE.
+
+Upload the code to your ESP32 board.
+
+## Usage
+Connect all components according to the wiring diagram above.
+Upload the code to the ESP32.
+Open the Serial Monitor to view the angle and distance measurements.
+The LCD screen will display the current angle and the distance to detected objects in centimeters.
+License
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+### Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or new features.
+
+### Acknowledgments
+Special thanks to the open-source community and the creators of the libraries used in this project.
+
