@@ -1,0 +1,6 @@
+# Wokwi Library List
+# See https://docs.wokwi.com/guides/libraries
+
+NewPing
+ESP32Servo
+LiquidCrystal I2C

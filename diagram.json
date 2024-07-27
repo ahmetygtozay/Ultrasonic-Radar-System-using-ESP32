@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "author": "ahmet yiğit",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 0,
+      "left": -71.96,
+      "attrs": { "hornColor": "#000088" }
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic1",
+      "top": -36.9,
+      "left": 111.1,
+      "attrs": { "distance": "59" }
+    },
+    { "type": "wokwi-servo", "id": "servo1", "top": 103.6, "left": 67.2, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -176,
+      "left": 63.2,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "ultrasonic1:VCC", "esp:5V", "red", [ "v182.4", "h-307.2", "v-28.8" ] ],
+    [ "esp:GND.2", "ultrasonic1:GND", "black", [ "v0", "h48", "v76.8", "h134.4" ] ],
+    [ "servo1:GND", "esp:GND.2", "black", [ "h-9.6", "v-124.8" ] ],
+    [ "servo1:V+", "esp:5V", "red", [ "h-19.2", "v67.3", "h-115.2" ] ],
+    [ "servo1:PWM", "esp:26", "green", [ "h-28.8", "v48.2", "h-124.8", "v-105.6" ] ],
+    [ "lcd1:VCC", "esp:3V3", "red", [ "h0" ] ],
+    [ "lcd1:GND", "esp:GND.2", "black", [ "h0" ] ],
+    [ "ultrasonic1:TRIG", "esp:18", "green", [ "v0" ] ],
+    [ "ultrasonic1:ECHO", "esp:19", "green", [ "v0" ] ],
+    [ "lcd1:SDA", "esp:21", "green", [ "h0" ] ],
+    [ "lcd1:SCL", "esp:22", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
